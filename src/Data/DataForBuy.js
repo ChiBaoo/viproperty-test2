@@ -1,0 +1,16 @@
+export const data = [
+    {name: 'Rose Town', address: 'Ngoc Hoi, Hoang Mai District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/Chung-cu-Rose-Town-02.jpg', price:'$1.527 - $1.688', locate: 'Ha Noi'},
+    {name: 'Florence', address: 'Tran Huu Duc, Nam Tu Liem District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/Florence.jpg', price:'$1.487 - $1.809', locate: 'Ha Noi'},
+    {name: 'Masteri West Heights', address: 'Tay Mo, Nam Tu Liem District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/masteri-west-heights.jpg', price:'$2.200 - $2.800', locate: 'Ha Noi'},
+    {name: 'The Grand Ha Noi', address: 'Hang Bai, Hoan Kiem District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/the-grand-ha-noi.jpg', price:'$20.000 - $25.000', locate: 'Ha Noi'},
+    {name: 'Vinhomes Smart City', address: 'Tay Mo, Nam Tu Liem District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/du%CC%9B%CC%A3-a%CC%81n-%C4%91o%CC%82-thi%CC%A3-Vinhomes-Smart-City.jpg', price:'$1.849 - $2.412', locate: 'Ha Noi'},
+    {name: 'Hanoi Paragon', address: 'Duy Tan, Cau Giay District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/du%CC%9B%CC%A3-a%CC%81n-%C4%91o%CC%82-thi%CC%A3-Vinhomes-Smart-City.jpg', price:'$1.809 - $2.010', locate: 'Ha Noi'},
+    {name: 'Starlake', address: 'Starlake urban area, Bac Tu Liem District, Ha Noi', img: 'https://viproperty.vn/landing/mobile/images/du%CC%9B%CC%A3-a%CC%81n-%C4%91o%CC%82-thi%CC%A3-Vinhomes-Smart-City.jpg', price:'$2.600 - $3.600', locate: 'Ha Noi'},
+    {name: 'Eco Green Sai Gon', address: 'Nguyen Van Linh, District 7, Ho Chi Minh', img: 'https://viproperty.vn/landing/mobile/images/v134_732.png', price:'$2.700 - 3.100', locate:'Ho Chi Minh'},
+    {name: 'Vinhomes Central Park', address: 'Nguyen Huu Canh, Binh Thanh District, Ho Chi Minh', img: 'https://viproperty.vn/landing/mobile/images/shutterstock_1987891529.jpg', price:'$3.000 - $3.600', locate:'Ho Chi Minh'},
+    {name: 'Vinhomes Golden River', address: 'Nguyen Huu Canh, District 1, Ho Chi Minh City', img: 'https://viproperty.vn/landing/mobile/images/masteri-west-heights.jpg', price:'$5.810 - $6.100', locate:'Ho Chi Minh'},
+    {name: 'Vinhomes Grand Park', address: 'Nguyen Xien, District 9, Thu Duc City', img: 'https://viproperty.vn/landing/mobile/images/v134_765.png', price:'$1.800 - $2.800', locate:'Ho Chi Minh'},
+    {name: 'Grand Marina Saigon', address: 'Nguyen Huu Canh, District 1, Ho Chi Minh City', img: 'https://viproperty.vn/landing/mobile/images/grand-marina-12_optimized.jpg', price:'$13.000 - $16.000', locate:'Ho Chi Minh'},
+    {name: 'Thu Thiem Zeit River', address: 'Thu Thiem Urban Area, District 2, Thu Duc City', img: 'https://viproperty.vn/landing/mobile/images/phoi-canh-mat-bang-du-an-thu-thiem-zeit-river.jpg', price:'$7.000 - $8.000', locate:'Ho Chi Minh'},
+    {name: 'The River Thu Thiem', address: 'Thu Thiem Urban Area, District 2, Thu Duc City', img: 'https://viproperty.vn/landing/mobile/images/du-a-n-ca-n-ho-the-riverin-thu-thie-m-qua-n-2.jpg', price:'$6.000 - $7.500', locate:'Ho Chi Minh'},
+];
