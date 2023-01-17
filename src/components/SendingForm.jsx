@@ -55,8 +55,6 @@ export default function SendingForm() {
                 pauseOnHover
                 theme="colored"
             />
-
-        {/* <button type='submit'>Send message</button> */}
         </form>
       </section>
     </div>

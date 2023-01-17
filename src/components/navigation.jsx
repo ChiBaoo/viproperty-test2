@@ -10,6 +10,9 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
+import Contact from './Contact';
+import PhoneInTalkRoundedIcon from '@mui/icons-material/PhoneInTalkRounded';
+import { data } from '../Data/NavbarData'
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,7 +27,7 @@ function ResponsiveAppBar() {
 
 
   return (
-    <AppBar position="static">
+    <AppBar sx={{ backgroundColor: 'white', boxShadow: 0, color: 'yellow', marginBottom: 100 }} position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />s */}
@@ -44,7 +47,12 @@ function ResponsiveAppBar() {
             }}
           >
             {/* <Link to='/' style={{ textDecoration: "none" }}>Viproperty</Link> */}
-            <a style={{ textDecoration: "none" }} href='https://viproperty.vn/'>Viproperty</a>
+            <a style={{ textDecoration: "none" }} href='https://viproperty.vn/'>
+              <img
+                src="https://viproperty.vn/uploads/logo/logo.webp"
+                alt="example"
+              />
+            </a>
           </Typography>
           {/* PHONE */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -71,43 +79,24 @@ function ResponsiveAppBar() {
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClick={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
-                  <Link to='/' style={{ textDecoration: "none" }}>Home</Link>
-                  {/* <a style={{ textDecoration: "none" }} href='https://viproperty.vn/'>Home</a> */}
-                </Typography>
-              </MenuItem>
+              {data.map((Navbar) => (
+                <MenuItem sx={{ color: 'yellow' }} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" sx={{}}>
+                    <Link to={Navbar.link} style={{ textDecoration: "none", color: 'green' }}>{Navbar.label}</Link>
+                  </Typography>
+                </MenuItem>
+              ))}
               <MenuItem >
-                <Typography textAlign="center"><Link to='/sendMail' style={{ textDecoration: "none" }}>Send an email</Link></Typography>
+                <PhoneInTalkRoundedIcon color="success" /> <Contact color='green' />
               </MenuItem>
-              <MenuItem >
-                <Typography textAlign="center"><Link to='/buy' style={{ textDecoration: "none" }}>Buy</Link></Typography>
-              </MenuItem>
-              <MenuItem >
-                <Typography textAlign="center"><Link to='/rent' style={{ textDecoration: "none" }}>Rent</Link></Typography>
-              </MenuItem>
-              <MenuItem >
-                <Typography textAlign="center"><Link to='/marketResearch' style={{ textDecoration: "none" }}>Market Research</Link></Typography>
-              </MenuItem>
-              <MenuItem >
-                <Typography textAlign="center"><Link to='/investmentPolicy' style={{ textDecoration: "none" }}>Investment Policy</Link></Typography>
-              </MenuItem>
-              <MenuItem >
-                <Typography textAlign="center"><Link to='/contact' style={{ textDecoration: "none" }}>Contact</Link></Typography>
-              </MenuItem>
-              <MenuItem >
-                <Typography textAlign="center"><Link to='/about' style={{ textDecoration: "none" }}>About us</Link></Typography>
-              </MenuItem>
-
             </Menu>
           </Box>
 
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -124,59 +113,30 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            {/* <Link to='/' style={{ textDecoration: "none" }}>Viproperty</Link> */}
-            <a style={{ textDecoration: "none" }} href='https://viproperty.vn/'>Viproperty</a>
+            <a style={{ textDecoration: "none" }} href='https://viproperty.vn/'>
+              <img
+                src="https://viproperty.vn/uploads/logo/logo.webp"
+                alt="example"
+              />
+            </a>
 
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center">
-                <Link to='/' style={{ textDecoration: "none" }}>Home</Link>
-                {/* <a style={{ textDecoration: "none" }} href='https://viproperty.vn/'>Home</a> */}
+            {data.map((navbar) => (
+              <Link to={navbar.link} style={{ textDecoration: "none" }}>
+                <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+                  <Typography textAlign="center" color='green'>
+                    {navbar.label}
+                  </Typography>
+                </Button>
+              </Link>
+            ))}
 
-              </Typography>
+
+            <Button onClick={handleCloseNavMenu} sx={{ marginLeft: '25%' }}>
+              <PhoneInTalkRoundedIcon color="success" /> <Contact color='green' />
             </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/sendMail' style={{ textDecoration: "none" }}>Send an email</Link></Typography>
-            </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/buy' style={{ textDecoration: "none" }}>Buy</Link></Typography>
-            </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/rent' style={{ textDecoration: "none" }}>Rent</Link></Typography>
-            </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/marketResearch' style={{ textDecoration: "none" }}>Market Research</Link></Typography>
-            </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/investmentPolicy' style={{ textDecoration: "none" }}>Investment Policy</Link></Typography>
-            </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/contact' style={{ textDecoration: "none" }}>Contact</Link></Typography>
-            </Button>
-
-            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-              <Typography textAlign="center"><Link to='/about' style={{ textDecoration: "none" }}>About us</Link></Typography>
-            </Button>
-
-
-            {/* {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))} */}
           </Box>
-
 
         </Toolbar>
       </Container>

@@ -1,113 +1,150 @@
 import React from 'react'
-import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { data } from '../Data/DataForBuy'
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea, Button, CardActions } from '@mui/material';
-import {data} from '../Data/DataForBuy'
-import Box from '@mui/material/Box';
+import { Button, CardActionArea } from '@mui/material';
+import Card from '@mui/material/Card';
+import Contact from '../components/Contact';
+import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { experimentalStyled as styled } from '@mui/material/styles';
 
-export default function buy() {
-
-  const filterHanoi = data.filter((data) => {
-    return data.locate === 'Ha Noi'
-  }) 
-  const filterHochiminh = data.filter((data) => {
-    return data.locate === 'Ho Chi Minh'
-  })  
-
-  const Item = styled(Paper)(({ theme }) => ({
+const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'left',
+  padding: theme.spacing(1),
+  textAlign: 'center',
   color: theme.palette.text.secondary,
-  boxShadow: 0,
 }));
+
+const filterHanoi = data.filter((data) => {
+  return data.locate === 'Ha Noi'
+})
+
+const filterHochiminh = data.filter((data) => {
+  return data.locate === 'Ho Chi Minh'
+})
+
+export default function Buy() {
+
   return (
-    <div >
-      <div className='buy-phone'>
-      <img className='img-phone' src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg'/>
-      </div>
-      <Box sx={{ flexGrow: 1}}>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8, md: 12 }} >
-      {filterHochiminh.map((Hochiminh) => (
-          <Grid item xs={1} sm={4} md={4} >
-            <Item>
-            <Card sx={{ maxWidth: 345, boxShadow: 0 }}>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image={Hochiminh.img}
-                            alt="green iguana"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div">
-                                {Hochiminh.name}
-                            </Typography>
-                            <Typography variant="body3" color="text.secondary">
-                                {Hochiminh.address}
-                            </Typography>
-                            <Typography gutterBottom variant="body2" component="div">
-                                {Hochiminh.price}/sqm
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small" color="primary" sx={{margin: '0 auto', color: 'green'}} >
-                            Contact
-                        </Button>
-                    </CardActions>
-                </Card>
+    <div>
+      <div style={{ width: '90%', margin: '0 auto' }}>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Item sx={{ boxShadow: 0 }}>
+              <Typography sx={{ fontSize: '3vw', fontFamily: 'serif', fontWeight: 700, paddingTop: '1px', paddingBottom: '1px', textAlign: 'left' }}>
+                Our Popular Cities
+              </Typography>
+              <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px', textAlign: 'left' }}>
+                Find best deals apartments, houses and rooms for rent or buy in our most popular locationss
+              </Typography>
+              <Button sx={{ marginTop: '15%', width: '50%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
+                <Contact color='white' backgroundColor='transparent' fontSize='0.45rem' content='Book now' />
+              </Button>
             </Item>
           </Grid>
-        ))}
-      </Grid>
-    </Box>
-      <div className='buy-phone'>
-      <img className='img-phone' src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg'/>
-      </div>
-      <Box sx={{ flexGrow: 1}}>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8, md: 12 }} >
-      {filterHanoi.map((Hanoi) => (
-          <Grid item xs={1} sm={4} md={4} >
-            <Item>
-            <Card sx={{ maxWidth: 345, boxShadow: 0 }}>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image={Hanoi.img}
-                            alt="green iguana"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div">
-                                {Hanoi.name}
-                            </Typography>
-                            <Typography variant="body3" color="text.secondary">
-                                {Hanoi.address}
-                            </Typography>
-                            <Typography gutterBottom variant="body2" component="div">
-                                {Hanoi.price}/sqm
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small" color="primary" sx={{margin: '0 auto', color: 'green'}} >
-                            Contact
-                        </Button>
-                    </CardActions>
-                </Card>
+          <Grid item xs={4}>
+            <Item sx={{ boxShadow: 0 }}>
+              <img src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg' style={{ width: 120, height: 150 }} />
+              <Typography sx={{ fontSize: '2.2vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Hanoi Capital, Vietnam</Typography>
+              <Typography sx={{ color: 'green', fontSize: '2.2vw', fontFamily: 'serif', textAlign: 'left' }} >
+                <a style={{ color: 'green' }} href='#hanoi'>Explore more</a>
+              </Typography>
             </Item>
           </Grid>
-        ))}
-      </Grid>
-    </Box>
-      
+          <Grid item xs={4}>
+            <Item sx={{ boxShadow: 0 }}>
+              <Typography sx={{ fontSize: '2.2vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Ho Chi Minh City, Vietnams</Typography>
+              <Typography sx={{ color: 'green', fontSize: '2.2vw', fontFamily: 'serif', textAlign: 'left' }} >
+                <a style={{ color: 'green' }} href='#hochiminh'>Explore more</a>
+              </Typography>
+              <img src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg' style={{ width: 120, height: 150 }} />
+            </Item>
+          </Grid>
+        </Grid>
+      </div>
+      <div id="hanoi" style={{ width: '55%' }}>
+        <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+          — Apartment For Sale in Hanoi
+        </Typography>
+        <Typography sx={{ fontSize: '2vw', fontFamily: 'serif', color: 'grey', paddingTop: '1px', paddingBottom: '3px' }}>
+          Hanoi, Vietnam's Capital, Is The Biggest Centrally City In Vietnam,
+          With A Total Area Of 3,359.82 Km2 And A Population Of 8.33 Million.
+        </Typography>
+      </div>
+      <div style={{ width: '95%', margin: '0 auto' }}>
+        <Slider slidesToShow={3} slidesToScroll={3}>
+          {filterHanoi.map((hanoi) => (
+            <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
+              <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  image={hanoi.img}
+                  alt="green iguana"
+                  sx={{ borderBottomLeftRadius: 20 }}
+                />
+                <CardContent sx={{ padding: '8px' }}>
+                  <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                    {hanoi.name}
+                  </Typography>
+                  <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px' }}>
+                    {hanoi.address}
+                  </Typography>
+                  <Typography sx={{ fontSize: '2.1vw', color: 'green', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                    {hanoi.price}/sqm
+                  </Typography>
+                  <Contact fontSize='0.6rem' color='green' content='Book now' />
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          ))}
+        </Slider>
+      </div>
+      <div id="hochiminh" style={{ width: '55%' }}>
+        <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+          — Apartment For Sale in Ho Chi Minh
+        </Typography>
+        <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', color: 'grey', paddingTop: '1px', paddingBottom: '3px' }}>
+          Ho Chi Minh City, Also Known By Its Old Popular Name Saigon, With A
+          Total Area Of 2,095 Km2 And A Population Of 9,167 Million.
+        </Typography>
+      </div>
+      <div style={{ width: '95%', margin: '0 auto' }}>
+        <Slider slidesToShow={3} slidesToScroll={3}>
+          {filterHochiminh.map((hochiminh) => (
+            <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
+              <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
+                <CardMedia
+                  component="img"
+                  height="120"
+                  image={hochiminh.img}
+                  alt="green iguana"
+                  sx={{ borderBottomLeftRadius: 20 }}
+                />
+                <CardContent sx={{ padding: '8px' }}>
+                  <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                    {hochiminh.name}
+                  </Typography>
+                  <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px' }}>
+                    {hochiminh.address}
+                  </Typography>
+                  <Typography sx={{ fontSize: '2.1vw', color: 'green', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                    {hochiminh.price}/sqm
+                  </Typography>
+                  <Contact fontSize='0.6rem' color='green' content='Book now' />
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          ))}
+        </Slider>
+      </div>
+
     </div>
   )
 }
