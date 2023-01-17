@@ -57,7 +57,7 @@ export default function About() {
         </Grid>
         <Grid xs={7} >
           <Item sx={{ boxShadow: 0 }}>
-            <img src='assests/about.png' style={{ width: '100%', height: '100%' }} />
+            <img src='https://viproperty.vn/landing/images/DSC01501.jpg' style={{ width: '100%', height: '100%' }} />
           </Item>
         </Grid>
       </Grid>

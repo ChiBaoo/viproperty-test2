@@ -44,7 +44,7 @@ export default function Buy() {
                 Find best deals apartments, houses and rooms for rent or buy in our most popular locationss
               </Typography>
               <Button sx={{ marginTop: '15%', width: '50%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
-                <Contact color='white' backgroundColor='transparent' fontSize='0.45rem' content='Book now' />
+                <Contact color='white' backgroundColor='transparent' fontSize='0.4rem' content='Book now' />
               </Button>
             </Item>
           </Grid>
@@ -68,11 +68,11 @@ export default function Buy() {
           </Grid>
         </Grid>
       </div>
-      <div id="hanoi" style={{ width: '55%' }}>
-        <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+      <div id="hanoi" style={{ width: '60%' }}>
+        <Typography sx={{ fontSize: '3.5vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
           — Apartment For Sale in Hanoi
         </Typography>
-        <Typography sx={{ fontSize: '2vw', fontFamily: 'serif', color: 'grey', paddingTop: '1px', paddingBottom: '3px' }}>
+        <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif', color: 'grey', paddingTop: '1px', paddingBottom: '3px', marginLeft: '3%' }}>
           Hanoi, Vietnam's Capital, Is The Biggest Centrally City In Vietnam,
           With A Total Area Of 3,359.82 Km2 And A Population Of 8.33 Million.
         </Typography>
@@ -106,11 +106,11 @@ export default function Buy() {
           ))}
         </Slider>
       </div>
-      <div id="hochiminh" style={{ width: '55%' }}>
-        <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+      <div id="hochiminh" style={{ width: '60%' }}>
+        <Typography sx={{ fontSize: '3.5vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
           — Apartment For Sale in Ho Chi Minh
         </Typography>
-        <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', color: 'grey', paddingTop: '1px', paddingBottom: '3px' }}>
+        <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif', color: 'grey', paddingTop: '1px', paddingBottom: '3px', marginLeft: '3%' }}>
           Ho Chi Minh City, Also Known By Its Old Popular Name Saigon, With A
           Total Area Of 2,095 Km2 And A Population Of 9,167 Million.
         </Typography>
