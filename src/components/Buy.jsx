@@ -43,14 +43,14 @@ export default function Buy() {
               <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px', textAlign: 'left' }}>
                 Find best deals apartments, houses and rooms for rent or buy in our most popular locationss
               </Typography>
-              <Button sx={{ marginTop: '15%', width: '50%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
+              <Button sx={{ marginTop: '15%', width: '70%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
                 <Contact color='white' backgroundColor='transparent' fontSize='0.4rem' content='Book now' />
               </Button>
             </Item>
           </Grid>
           <Grid item xs={4}>
             <Item sx={{ boxShadow: 0 }}>
-              <img src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg' style={{ width: 120, height: 150 }} />
+              <img src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg' style={{ width: 120, height: 150, marginLeft: '-5%' }} />
               <Typography sx={{ fontSize: '2.2vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Hanoi Capital, Vietnam</Typography>
               <Typography sx={{ color: 'green', fontSize: '2.2vw', fontFamily: 'serif', textAlign: 'left' }} >
                 <a style={{ color: 'green' }} href='#hanoi'>Explore more</a>
@@ -63,7 +63,7 @@ export default function Buy() {
               <Typography sx={{ color: 'green', fontSize: '2.2vw', fontFamily: 'serif', textAlign: 'left' }} >
                 <a style={{ color: 'green' }} href='#hochiminh'>Explore more</a>
               </Typography>
-              <img src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg' style={{ width: 120, height: 150 }} />
+              <img src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg' style={{ width: 120, height: 150, marginLeft: '-5%' }} />
             </Item>
           </Grid>
         </Grid>
@@ -77,7 +77,8 @@ export default function Buy() {
           With A Total Area Of 3,359.82 Km2 And A Population Of 8.33 Million.
         </Typography>
       </div>
-      <div style={{ width: '95%', margin: '0 auto' }}>
+      <div style={{backgroundColor: '#FBC231'}}>
+      <div style={{ width: '85%', margin: '0 auto', backgroundColor: 'white', paddingTop: '3%'}}>
         <Slider slidesToShow={3} slidesToScroll={3}>
           {filterHanoi.map((hanoi) => (
             <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
@@ -89,8 +90,8 @@ export default function Buy() {
                   alt="green iguana"
                   sx={{ borderBottomLeftRadius: 20 }}
                 />
-                <CardContent sx={{ padding: '8px' }}>
-                  <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                <CardContent sx={{ padding: '2px' }}>
+                  <Typography sx={{ fontSize: '2.2vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
                     {hanoi.name}
                   </Typography>
                   <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px' }}>
@@ -106,6 +107,8 @@ export default function Buy() {
           ))}
         </Slider>
       </div>
+      </div>
+      
       <div id="hochiminh" style={{ width: '60%' }}>
         <Typography sx={{ fontSize: '3.5vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
           — Apartment For Sale in Ho Chi Minh
@@ -115,35 +118,38 @@ export default function Buy() {
           Total Area Of 2,095 Km2 And A Population Of 9,167 Million.
         </Typography>
       </div>
-      <div style={{ width: '95%', margin: '0 auto' }}>
-        <Slider slidesToShow={3} slidesToScroll={3}>
-          {filterHochiminh.map((hochiminh) => (
-            <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
-              <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
-                <CardMedia
-                  component="img"
-                  height="120"
-                  image={hochiminh.img}
-                  alt="green iguana"
-                  sx={{ borderBottomLeftRadius: 20 }}
-                />
-                <CardContent sx={{ padding: '8px' }}>
-                  <Typography sx={{ fontSize: '2.3vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
-                    {hochiminh.name}
-                  </Typography>
-                  <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px' }}>
-                    {hochiminh.address}
-                  </Typography>
-                  <Typography sx={{ fontSize: '2.1vw', color: 'green', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
-                    {hochiminh.price}/sqm
-                  </Typography>
-                  <Contact fontSize='0.6rem' color='green' content='Book now' />
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          ))}
-        </Slider>
+      <div style={{ backgroundColor: '#FBC231' }}>
+        <div style={{ width: '85%', margin: '0 auto', paddingTop: '3%', backgroundColor: 'white' }}>
+          <Slider slidesToShow={3} slidesToScroll={3}>
+            {filterHochiminh.map((hochiminh) => (
+              <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
+                <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
+                  <CardMedia
+                    component="img"
+                    height='120'
+                    image={hochiminh.img}
+                    alt="green iguana"
+                    sx={{ borderBottomLeftRadius: 20 }}
+                  />
+                  <CardContent sx={{ padding: '2px' }}>
+                    <Typography sx={{ fontSize: '2.2vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                      {hochiminh.name}
+                    </Typography>
+                    <Typography sx={{ fontSize: '1.9vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px' }}>
+                      {hochiminh.address}
+                    </Typography>
+                    <Typography sx={{ fontSize: '2.1vw', color: 'green', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
+                      {hochiminh.price}/sqm
+                    </Typography>
+                    <Contact fontSize='0.6rem' color='green' content='Book now' />
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            ))}
+          </Slider>
+        </div>
       </div>
+
 
     </div>
   )

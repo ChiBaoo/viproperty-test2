@@ -25,10 +25,10 @@ export default function FullWidthGrid() {
     <div>
       <div>
         <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', fontFamily: 'Open Sans', margin: 3 }}>Any question? Reach us</Typography>
-        <Grid container spacing={{ xs: 2, md: 3 }} sx={{}}>
+        <Grid container>
           {contactData.map((contact) => (
             <Grid item xs={3}>
-              <Item sx={{ boxShadow: 0 }}>
+              <Item sx={{ boxShadow: 0, width: '60%', margin: '0 auto' }}>
                 <a href={contact.link}>
                   <img
                     src={contact.img}
@@ -77,7 +77,7 @@ export default function FullWidthGrid() {
         </Grid>
       </Box>
       <div style={{ backgroundColor: 'darkslategray', height: 30, textAlign: 'center', justifyContent: 'center', color: 'White', marginTop: 0 }}>
-        © 2023. viproperty. All rights reserved.
+        © 2023. VIproperty. All rights reserved.
       </div>
     </div>
 

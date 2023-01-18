@@ -89,7 +89,7 @@ export default function About() {
         <Typography variant='h6' color='green' sx={{ paddingTop: '5%', marginBottom: '5%', paddingLeft: '5%', fontFamily: 'serif' }}>
           - Our Perfect Consultant
         </Typography>
-        <div style={{ width: '90%', margin: '0 auto' }}>
+        <div style={{ width: '85%', margin: '0 auto' }}>
           <Slider slidesToShow={3} slidesToScroll={3}>
             {data.map((manager) => (
               <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>

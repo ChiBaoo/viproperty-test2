@@ -43,7 +43,7 @@ export default function InvestmentPolicy() {
         </Accordion>
       ))}
       <Button sx={{marginLeft: '24vw', marginTop: '5%', width: '50%', backgroundColor: 'green', height: 30}}>
-      <Contact color='yellow' backgroundColor='transparent' fontSize='0.8rem' content='Book a consultant'/>
+      <Contact color='white' backgroundColor='transparent' fontSize='0.8rem' content='Book a consultant'/>
       </Button>
     </div>
   )
