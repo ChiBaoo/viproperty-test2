@@ -41,7 +41,7 @@ export default function Buy() {
                 Our Popular Cities
               </Typography>
               <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px', textAlign: 'left' }}>
-                Find best deals apartments, houses and rooms for rent or buy in our most popular locationss
+                Find best deals apartments, houses and rooms for rent or buy in our most popular locations
               </Typography>
               <Button sx={{ marginTop: '15%', width: '70%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
                 <Contact color='white' backgroundColor='transparent' fontSize='0.4rem' content='Book now' />
@@ -51,16 +51,16 @@ export default function Buy() {
           <Grid item xs={4}>
             <Item sx={{ boxShadow: 0 }}>
               <img src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg' style={{ width: 120, height: 150, marginLeft: '-5%' }} />
-              <Typography sx={{ fontSize: '2.2vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Hanoi Capital, Vietnam</Typography>
-              <Typography sx={{ color: 'green', fontSize: '2.2vw', fontFamily: 'serif', textAlign: 'left' }} >
+              <Typography sx={{ fontSize: '1.9vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Hanoi Capital, Vietnam</Typography>
+              <Typography sx={{ color: 'green', fontSize: '2vw', fontFamily: 'serif', textAlign: 'left' }} >
                 <a style={{ color: 'green' }} href='#hanoi'>Explore more</a>
               </Typography>
             </Item>
           </Grid>
           <Grid item xs={4}>
             <Item sx={{ boxShadow: 0 }}>
-              <Typography sx={{ fontSize: '2.2vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Ho Chi Minh City, Vietnams</Typography>
-              <Typography sx={{ color: 'green', fontSize: '2.2vw', fontFamily: 'serif', textAlign: 'left' }} >
+              <Typography sx={{ fontSize: '1.9vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Ho Chi Minh City, Vietnam</Typography>
+              <Typography sx={{ color: 'green', fontSize: '2vw', fontFamily: 'serif', textAlign: 'left' }} >
                 <a style={{ color: 'green' }} href='#hochiminh'>Explore more</a>
               </Typography>
               <img src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg' style={{ width: 120, height: 150, marginLeft: '-5%' }} />

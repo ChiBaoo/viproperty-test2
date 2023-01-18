@@ -14,6 +14,8 @@ import Card from '@mui/material/Card';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import LocalPoliceOutlinedIcon from '@mui/icons-material/LocalPoliceOutlined';
 import PanToolAltOutlinedIcon from '@mui/icons-material/PanToolAltOutlined';
+import { yellow } from '@mui/material/colors';
+
 
 const about = 'VIProperty provides one-stop real estate services in Vietnam include consulting optimized real estate investment solutions and seamless handling the whole life cycle of real estate investment such as payment support, property handover, furnishing, leasing & property managament, property resell.'
 const ourService = [
@@ -38,7 +40,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function About() {
   return (
     <div>
-      <h1>About us</h1>
+      <Typography sx={{ fontWeight: 600, fontSize: '2rem', fontFamily: 'Open Sans', textAlign: 'center', marginTop: '-5%' }}>About us</Typography>
       <iframe src="https://www.youtube.com/embed/97_yQTpeqos?autoplay=1&mute=1" allowfullscreen
         style={{ width: '95%', height: '300px', marginLeft: '1%', border: 0 }} />
       <Grid container>
@@ -75,7 +77,7 @@ export default function About() {
         </Grid>
       </div>
       {ourService.map((service) => (
-        <div>
+        <div style={{marginLeft: '3%'}}>
           <Typography variant="h6" sx={{ fontFamily: 'EB Garamond', fontWeight: 600, }} >
             {service.title}
           </Typography>
@@ -121,7 +123,7 @@ export default function About() {
           {chooseUs.map((reason) => (
             <Grid xs={4} sx={{boxShadow: 0}}>
               <Item sx={{boxShadow:0}}>
-                <reason.icon />
+                <reason.icon sx={{color: yellow[700]}} />
                 <Typography sx={{ fontWeight: 700, fontSize: '0.8rem', fontFamily: 'Open Sans', color: 'black' }}>
                     {reason.title}
                 </Typography>

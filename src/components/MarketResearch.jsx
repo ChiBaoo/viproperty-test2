@@ -74,7 +74,7 @@ export default function MarketResearch() {
       </div>
       <div>
         <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', fontFamily: 'Open Sans', textAlign: 'center', margin: 4 }}>PURCHASING GUIDELINE</Typography>
-        <img src='https://viproperty.vn/landing/images/Purchasing%20guideline.png' style={{ width: '98%', height: '98%', marginLeft: '-5%'}}/>
+        <img src='https://viproperty.vn/landing/images/Purchasing%20guideline.png' style={{ width: '98%', height: '98%', marginLeft: '-10%'}}/>
       </div>
     </div>
   )
