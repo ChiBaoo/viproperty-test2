@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Button, CardActions } from '@mui/material';
+import { CardActionArea, Button } from '@mui/material';
 import { data } from '../Data/DataForRent'
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -93,7 +93,7 @@ export default function Rent() {
           </Item>
         </Grid>
       </Grid>
-      <Typography sx={{ fontSize: '4vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
+      <Typography id='rent' sx={{ fontSize: '4vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
         — Apartment For Rent in Ho Chi Minh
       </Typography>
       <Box sx={{ flexGrow: 1 }}>
