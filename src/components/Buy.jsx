@@ -43,7 +43,7 @@ export default function Buy() {
               <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif', paddingTop: '1px', paddingBottom: '1px', textAlign: 'left' }}>
                 Find best deals apartments, houses and rooms for rent or buy in our most popular locations
               </Typography>
-              <Button sx={{ marginTop: '15%', width: '70%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
+              <Button sx={{ marginTop: '15%', width: '100%', backgroundColor: 'green', height: 20, marginLeft: '-40px' }}>
                 <Contact color='white' backgroundColor='transparent' fontSize='0.4rem' content='Book now' />
               </Button>
             </Item>
