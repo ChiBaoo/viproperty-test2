@@ -32,15 +32,23 @@ export default function Contact(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [contactContent, setContactContent] = React.useState(props.content);
+  const [fontSize, setFontSize] = React.useState(props.fontSize);
+
+
 
   React.useEffect(() => {
     console.log('runnn')
     if(!props.content)
       setContactContent('Contact')
-  },[props.content]);
+  },[props.content] );
+  React.useEffect(() => {
+    console.log('runnn')
+    if(!props.fontSize)
+    setFontSize(8)
+  },[props.fontSize] );
   return (
     <div>
-      <Button onClick={handleOpen} style={{color:props.color, fontSize: props.fontSize, backgroundColor: props.backgroundColor}}>{contactContent}</Button>
+      <Button onClick={handleOpen} style={{color:props.color, fontSize: fontSize, backgroundColor: props.backgroundColor}}>{contactContent}</Button>
       <Modal
         open={open}
         onClose={handleClose}

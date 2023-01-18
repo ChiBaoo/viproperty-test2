@@ -116,7 +116,7 @@ export default function About() {
             ))}
           </Slider>
         </div>
-        <Button sx={{ marginLeft: '35%' }}><PhoneInTalkRoundedIcon color="success" /><Contact color='green' /></Button>
+        <Button sx={{ marginLeft: '35%' }}><PhoneInTalkRoundedIcon color="success" /><Contact color='green' fontSize='0.8rem' /></Button>
       </div>
       <div>
         <Grid container>

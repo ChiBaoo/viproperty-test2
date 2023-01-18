@@ -92,7 +92,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
               <MenuItem >
-                <PhoneInTalkRoundedIcon color="success" /> <Contact color='green' />
+                <PhoneInTalkRoundedIcon color="success" /> <Contact color='green' fontSize='0.8rem' />
               </MenuItem>
             </Menu>
           </Box>
@@ -134,7 +134,7 @@ function ResponsiveAppBar() {
 
 
             <Button onClick={handleCloseNavMenu} sx={{ marginLeft: '25%' }}>
-              <PhoneInTalkRoundedIcon color="success" /> <Contact color='green' />
+              <PhoneInTalkRoundedIcon color="success" /> <Contact color='green' fontSize='0.8rem' />
             </Button>
           </Box>
 
