@@ -34,7 +34,7 @@ export default function Buy() {
   return (
     <div>
       <div style={{ width: '90%', margin: '0 auto' }}>
-        <Grid container spacing={2}>
+        <Grid className='buy-intro' container spacing={2}>
           <Grid item xs={4}>
             <Item sx={{ boxShadow: 0 }}>
               <Typography sx={{ fontSize: '3vw', fontFamily: 'serif', fontWeight: 700, paddingTop: '1px', paddingBottom: '1px', textAlign: 'left' }}>
@@ -50,7 +50,7 @@ export default function Buy() {
           </Grid>
           <Grid item xs={4}>
             <Item sx={{ boxShadow: 0 }}>
-              <img src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg' style={{ width: 120, height: 150, marginLeft: '-5%' }} />
+              <img src='https://viproperty.vn/landing/mobile/images/mwap_pic_1.jpg' style={{  marginLeft: '-5%' }} />
               <Typography sx={{ fontSize: '1.9vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>Hanoi Capital, Vietnam</Typography>
               <Typography sx={{ color: 'green', fontSize: '2vw', fontFamily: 'serif', textAlign: 'left' }} >
                 <a style={{ color: 'green' }} href='#hanoi'>Explore more</a>
@@ -63,7 +63,7 @@ export default function Buy() {
               <Typography sx={{ color: 'green', fontSize: '2vw', fontFamily: 'serif', textAlign: 'left' }} >
                 <a style={{ color: 'green' }} href='#hochiminh'>Explore more</a>
               </Typography>
-              <img src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg' style={{ width: 120, height: 150, marginLeft: '-5%' }} />
+              <img src='https://viproperty.vn/landing/mobile/images/vinuni.jpeg' style={{ marginLeft: '-5%' }} />
             </Item>
           </Grid>
         </Grid>

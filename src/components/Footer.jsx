@@ -77,7 +77,7 @@ export default function FullWidthGrid() {
         </Grid>
       </Box>
       <div style={{ backgroundColor: 'darkslategray', height: 30, textAlign: 'center', justifyContent: 'center', color: 'White', marginTop: 0 }}>
-        © 2023. VIproperty. All rights reserved.
+        © 2023. VIProperty. All rights reserved.
       </div>
     </div>
 

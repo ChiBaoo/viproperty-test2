@@ -55,7 +55,7 @@ export default function Contact(props) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} style={{width: '90%'}}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Contact us
           </Typography>
