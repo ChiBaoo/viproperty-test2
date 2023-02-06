@@ -1,3 +1,5 @@
+
+
 .MuiInputLabel-root {
   font-size: 9px !important;
   /* padding-bottom: 20px !important; */
@@ -12,13 +14,47 @@
 .App {
   margin-top: 100px;
 }
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 380px) {
+  .buy-intro img{
+    width: 100px; 
+    height: 120px;
+  }
+  .rent-intro{
+    height: 30vh;
+  }
+  .rent-subintro1 img{
+    width: 60px;
+    height: 70px;
+  }
+  .reponsive-doubleline{
+    height: 4vh;
+  }
+  .responsive-cardimg img{
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 380px) {
   .App {
     margin-top: 80px;
   }
   .buy-intro img {
     width: 120px; 
     height: 150px;
+  }
+  .rent-intro{
+    height: 40vh;
+  }
+  .rent-subintro1 img{
+    width: 80px;
+    height: 100px;
+  }
+  .reponsive-doubleline{
+    height: 4vh;
+  }
+  .responsive-cardimg img{
+    height: 120px;
   }
 }
 
@@ -27,11 +63,54 @@
     width: 240px; 
     height: 300px;
   }
+  .rent-intro{
+    height: 50vh;
+  }
+  .rent-subintro1 img{
+    width: 140px;
+    height: 160px;
+  }
+  .reponsive-doubleline{
+    height: 6vh;
+  }
+  .responsive-cardimg img{
+    height: 200px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .buy-intro img{
     width: 300px; 
     height: 360px;
+  }
+  .rent-intro{
+    height: 80vh;
+  }
+  .rent-subintro1 img{
+    width: 200px;
+    height: 240px;
+  }
+  .reponsive-doubleline{
+    height: 10vh;
+  }
+  .responsive-cardimg img{
+    height: 270px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .buy-intro img{
+    width: 300px; 
+    height: 360px;
+  }
+  .rent-intro{
+    height: 80vh;
+  }
+  .rent-subintro1 img{
+    width: 240px;
+    height: 280px;
+  }
+  .responsive-cardimg img{
+    height: 300px;
   }
 }

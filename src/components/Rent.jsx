@@ -39,34 +39,40 @@ export default function Rent() {
     { title: 'Close All Your Needs', content: 'Completely meet all your criteria for a dream apartment', icon: VolunteerActivismOutlinedIcon },
   ];
   return (
-    <div >
+    <div style={{ marginTop: '-50px' }} >
       <div style={{
-        width: '100vw', height: '100%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',
+        width: '100%', height: '100%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',
         backgroundImage: "url('https://fthmb.tqn.com/yosHPR15d3-VaHTwWHId7jfpdlU=/4255x2830/filters:fill(auto,1)/where-is-saigon-57cf460b3df78c71b6b1f31d.jpg')"
       }}>
-        <div style={{background: 'rgba(255, 255, 255, 0.75)', paddingLeft: '5%', width: '50vw', height: '30vh', marginLeft: '7%'}}>
-          <Typography sx={{paddingTop: '30%', fontWeight: 600, color:'green', fontSize: '5vw', fontFamily: 'Open Sans' }}>Highlighted Projects in Vietnam</Typography>
+        <div className='rent-intro' style={{ background: 'rgba(255, 255, 255, 0.75)', paddingLeft: '5%', width: '50vw', marginLeft: '7%' }}>
+          <Typography sx={{ paddingTop: '30%', fontWeight: 600, color: 'green', fontSize: '5vw', fontFamily: 'Open Sans' }}>Highlighted Projects in Vietnam</Typography>
           <Typography sx={{ fontSize: '2.5vw', fontFamily: 'Open Sans' }}>Viproperty offers a full range of critical apartment projects that many people choose to rent long-term or short-term in Vietnam. Suitable for all customer requirements.</Typography>
         </div>
       </div>
       <Grid container>
         <Grid item xs={6}>
           <Item sx={{ boxShadow: 0 }}>
-            <Grid container>
-              <Grid item xs={6}>
-                <img src='https://viproperty.vn/landing/mobile/images/dreamstime%CC%82.png' style={{ width: 80, height: 100, borderRadius: 3 }} />
-                <div style={{ display: 'inline-flex' }}>
-                  <TaskAltIcon fontSize='1rem' color='success' /><Typography sx={{ marginLeft: '2%', fontSize: '1.8vw', fontFamily: 'serif', paddingBottom: '1px', textAlign: 'left', color: 'black', fontWeight: 500 }}> The best One-Stop real estate in Vietnam</Typography>
-                </div>
-              </Grid>
-              <Grid item xs={6}>
-                <div style={{ display: 'inline-flex' }}>
-                  <MilitaryTechIcon fontSize='1rem' color='success' /><Typography sx={{ marginLeft: '2%', fontSize: '1.8vw', fontFamily: 'serif', paddingBottom: '1px', textAlign: 'left', color: 'black', fontWeight: 500 }}> We Have more than 6 years of experience</Typography>
-                </div>
-                <img src='https://viproperty.vn/landing/mobile/images/2a4%20(1).jpg' style={{ width: 80, height: 100, borderRadius: 3 }} />
+            <div className='rent-subintro1'>
+              <Grid container>
+                <Grid item xs={6}>
+                  <img src='https://viproperty.vn/landing/mobile/images/dreamstime%CC%82.png' style={{ borderRadius: 3 }} />
+                  <div style={{ display: 'inline-flex' }}>
+                    <TaskAltIcon fontSize='1rem' color='success' /><Typography sx={{ marginLeft: '2%', fontSize: '1.8vw', fontFamily: 'serif', paddingBottom: '1px', textAlign: 'left', color: 'black', fontWeight: 500 }}> The best One-Stop real estate in Vietnam</Typography>
+                  </div>
+                </Grid>
+                <Grid item xs={6}>
+                  <div style={{ display: 'inline-flex' }}>
+                    <MilitaryTechIcon color='success' /><Typography sx={{ marginLeft: '2%', fontSize: '1.8vw', fontFamily: 'serif', paddingBottom: '1px', textAlign: 'left', color: 'black', fontWeight: 500 }}> We Have more than 6 years of experience</Typography>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <img src='https://viproperty.vn/landing/mobile/images/2a4%20(1).jpg' style={{ borderRadius: 3 }} />
 
+                  </div>
+
+
+                </Grid>
               </Grid>
-            </Grid>
+            </div>
           </Item>
         </Grid>
         <Grid item xs={6}>
@@ -97,30 +103,33 @@ export default function Rent() {
         — Apartment For Rent in Ho Chi Minh
       </Typography>
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container>
-          {filterHochiminh.map((hanoi) => (
+        <Grid container sx={{ boxShadow: 0 }}>
+          {filterHochiminh.map((hochiminh) => (
             <Grid item xs={4} >
               <Item sx={{ boxShadow: 0 }}>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card sx={{ maxWidth: 345, boxShadow: 0 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
                       height="120"
-                      image={hanoi.img}
+                      image={hochiminh.img}
                       alt="green iguana"
                     />
                     <CardContent sx={{ padding: 0.5 }}>
-                      <Typography sx={{ fontSize: '3vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
-                        {hanoi.name}
+                      <div className='reponsive-doubleline'>
+                        <Typography sx={{ fontSize: '2.8vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
+                          {hochiminh.name}
+                        </Typography>
+                      </div>
+
+                      <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif' }}>
+                        {hochiminh.address}<br />
                       </Typography>
                       <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif' }}>
-                        {hanoi.address}<br />
-                      </Typography>
-                      <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif' }}>
-                        {hanoi.room}
+                        {hochiminh.room}
                       </Typography>
                       <Typography sx={{ fontSize: '3vw', fontWeight: 600, fontFamily: 'serif', color: 'green' }} s>
-                        {hanoi.price}/sqm
+                        {hochiminh.price}/sqm
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -130,7 +139,7 @@ export default function Rent() {
           ))}
         </Grid>
       </Box>
-      <Button sx={{ width: '50%', backgroundColor: '#FBC231', height: 20, marginLeft: '24%', marginBottom:'3%' }}>
+      <Button sx={{ width: '50%', backgroundColor: '#FBC231', height: 20, marginLeft: '24%', marginBottom: '3%' }}>
         <Contact color='black' backgroundColor='transparent' fontSize='0.45rem' content='GET HO CHI MINH CONSULTANT' />
       </Button>
       <Typography sx={{ fontSize: '4vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
@@ -141,7 +150,7 @@ export default function Rent() {
           {filterHanoi.map((Hochiminh) => (
             <Grid item xs={4} >
               <Item sx={{ boxShadow: 0 }}>
-                <Card sx={{ maxWidth: 345 }}>
+                <Card sx={{ maxWidth: 345, boxShadow: 0 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -150,9 +159,11 @@ export default function Rent() {
                       alt="green iguana"
                     />
                     <CardContent sx={{ padding: 0.5 }}>
-                      <Typography sx={{ fontSize: '3vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
-                        {Hochiminh.name}
-                      </Typography>
+                      <div className='reponsive-doubleline'>
+                        <Typography sx={{ fontSize: '2.8vw', color: 'black', fontFamily: 'serif', fontWeight: 700, textAlign: 'left' }}>
+                          {Hochiminh.name}
+                        </Typography>
+                      </div>
                       <Typography sx={{ fontSize: '2.5vw', fontFamily: 'serif' }}>
                         {Hochiminh.address}<br />
                       </Typography>
@@ -171,7 +182,7 @@ export default function Rent() {
         </Grid>
       </Box>
 
-      <Button sx={{ width: '50%', backgroundColor: '#FBC231', height: 20, marginLeft: '24%', marginBottom:'3%' }}>
+      <Button sx={{ width: '50%', backgroundColor: '#FBC231', height: 20, marginLeft: '24%', marginBottom: '3%' }}>
         <Contact color='black' backgroundColor='transparent' fontSize='0.45rem' content='GET HA NOI CONSULTANT' />
       </Button>
     </div>

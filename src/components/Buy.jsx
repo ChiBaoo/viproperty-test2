@@ -83,13 +83,14 @@ export default function Buy() {
           {filterHanoi.map((hanoi) => (
             <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
               <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
+                <div className='responsive-cardimg'>
                 <CardMedia
                   component="img"
-                  height="120"
                   image={hanoi.img}
                   alt="green iguana"
                   sx={{ borderBottomLeftRadius: 20 }}
                 />
+                </div>
                 <CardContent sx={{ padding: '2px' }}>
                   <Typography sx={{ fontSize: '2.2vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
                     {hanoi.name}
@@ -124,13 +125,14 @@ export default function Buy() {
             {filterHochiminh.map((hochiminh) => (
               <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
                 <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
+                  <div className='responsive-cardimg'>
                   <CardMedia
                     component="img"
-                    height='120'
                     image={hochiminh.img}
                     alt="green iguana"
                     sx={{ borderBottomLeftRadius: 20 }}
                   />
+                  </div>
                   <CardContent sx={{ padding: '2px' }}>
                     <Typography sx={{ fontSize: '2.2vw', fontFamily: 'serif', fontWeight: 600, paddingTop: '1px', paddingBottom: '1px' }}>
                       {hochiminh.name}

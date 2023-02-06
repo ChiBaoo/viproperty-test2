@@ -77,7 +77,7 @@ export default function About() {
         </Grid>
       </div>
       {ourService.map((service) => (
-        <div style={{marginLeft: '3%'}}>
+        <div style={{ marginLeft: '3%' }}>
           <Typography variant="h6" sx={{ fontFamily: 'EB Garamond', fontWeight: 600, }} >
             {service.title}
           </Typography>
@@ -96,13 +96,14 @@ export default function About() {
             {data.map((manager) => (
               <Card sx={{ width: '20%', backgroundColor: 'transparent', boxShadow: 0, whiteSpace: 10, padding: '6 1 6 1' }}>
                 <CardActionArea sx={{ paddingLeft: 1, paddingRight: 1 }}>
-                  <CardMedia
-                    component="img"
-                    height="120"
-                    image={manager.img}
-                    alt="green iguana"
-                    sx={{ borderBottomLeftRadius: 20 }}
-                  />
+                  <div className='responsive-cardimg'>
+                    <CardMedia
+                      component="img"
+                      image={manager.img}
+                      alt="green iguana"
+                      sx={{ borderBottomLeftRadius: 20 }}
+                    />
+                  </div>
                   <CardContent>
                     <Typography sx={{ fontSize: '2.7vw', color: 'green', fontFamily: 'serif' }}>
                       {manager.name}
@@ -121,14 +122,14 @@ export default function About() {
       <div>
         <Grid container>
           {chooseUs.map((reason) => (
-            <Grid xs={4} sx={{boxShadow: 0}}>
-              <Item sx={{boxShadow:0}}>
-                <reason.icon sx={{color: yellow[700]}} />
+            <Grid xs={4} sx={{ boxShadow: 0 }}>
+              <Item sx={{ boxShadow: 0 }}>
+                <reason.icon sx={{ color: yellow[700] }} />
                 <Typography sx={{ fontWeight: 700, fontSize: '0.8rem', fontFamily: 'Open Sans', color: 'black' }}>
-                    {reason.title}
+                  {reason.title}
                 </Typography>
                 <Typography sx={{ fontWeight: 400, fontSize: '0.6rem', fontFamily: 'Open Sans' }}>
-                {reason.content}
+                  {reason.content}
                 </Typography>
               </Item>
             </Grid>
